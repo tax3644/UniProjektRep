@@ -1,4 +1,3 @@
-package Semester_2.AlgoritmerOgDatastrukturer.ProjektDel1;
 
 
 import java.util.ArrayList;

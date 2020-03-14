@@ -1,4 +1,4 @@
-package Semester_2.AlgoritmerOgDatastrukturer.ProjektDel1;
+
 
 public interface PQ {
 
