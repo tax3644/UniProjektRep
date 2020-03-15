@@ -81,8 +81,7 @@ public class PQHeap implements PQ {
         if (i % 2 == 1) {
             return (i - 1) / 2;
         } else
-
-        return (i - 2) / 2;
+            return (i - 2) / 2;
     }
 
     private void exchange(Element elementOne, Element elementTwo, int indexOne, int indexTwo){
