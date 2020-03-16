@@ -102,6 +102,7 @@ public class PQHeap implements PQ {
         heapArray.remove(heapArray.size()-1);
         minHeapify(0);
 
+
         return min;
     }
 
