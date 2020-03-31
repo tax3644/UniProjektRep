@@ -113,7 +113,6 @@ public class PQHeap implements PQ {
     // For at indsætte et element tilføjer vi det først til 'heapArray' hvilket gør at det kommer
     // sidst i arrayet, vi ved dog nødvendigvis ikke om det har højeste prioritet, derfor må vi
     // tjekke det og muligvis flytte det vha. while-løkken ud fra dets 'key'.
-
     @Override
     public void insert(Element e) {
         heapArray.add(e);
