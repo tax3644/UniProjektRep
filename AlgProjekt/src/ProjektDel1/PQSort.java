@@ -1,3 +1,4 @@
+package ProjektDel1;
 
 import java.util.Scanner;
 
