@@ -69,7 +69,7 @@ public class PQHeap implements PQ {
     }
 
     @Override
-    private Element extractMin() {
+    public Element extractMin() {
         Element min = heapArray.get(0);
         heapArray.set(0, heapArray.get(heapArray.size()-1));
         heapArray.remove(heapArray.size()-1);
@@ -78,7 +78,7 @@ public class PQHeap implements PQ {
     }
 
     @Override
-    private void insert(Element e) {
+    public void insert(Element e) {
 
         heapArray.add(e);
         int i = heapArray.size()-1;
