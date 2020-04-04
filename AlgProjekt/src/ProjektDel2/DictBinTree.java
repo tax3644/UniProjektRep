@@ -7,17 +7,12 @@ import java.util.TreeMap;
 public class DictBinTree implements Dict{
 
 
-
-
     private Map<Integer, BinNode> treemap1;
-    private int key;
     private BinNode root = null;
+    private ArrayList<Integer> orderedArray = new ArrayList<>();
 
-
-    public DictBinTree () {
+    public DictBinTree() {
         treemap1 = new TreeMap<>();
-        this.key = key;
-
     }
 
 
@@ -28,7 +23,7 @@ public class DictBinTree implements Dict{
         BinNode z = new BinNode(k);
 
         while(x != null){
-            y = this.root;
+            y = x;
             if (z.getKey() < x.getKey()){
                 x = x.getLeft();
             } else x = x.getRight();
@@ -42,28 +37,30 @@ public class DictBinTree implements Dict{
     }
 
 
-    /*--- SLET FØR AFLEVERING ELLER IMPLEMENTER OM!!!!!!!! ellers er det plagiat ---*/
-    void inorder()  {
-        inorderRec(this.root);
-    }
-
-    // A utility function to do inorder traversal of BST
-    void inorderRec(BinNode root) {
-        if (root != null) {
-            inorderRec(root.getLeft());
-            System.out.println(root.getKey());
-            inorderRec(root.getRight());
-        }
-    }
-
-
     @Override
     public ArrayList<Integer> orderedTraversal() {
-        return null;
+        return returnOrderedArray(this.root);
     }
+
+    private ArrayList<Integer> returnOrderedArray(BinNode x){
+        if (x != null){
+            returnOrderedArray(x.getLeft());
+            this.orderedArray.add(x.getKey());
+            returnOrderedArray(x.getRight());
+        }
+        return orderedArray;
+    }
+
 
     @Override
     public boolean search(int k) {
-        return false;
+        BinNode x = this.root;
+        while (x != null && k != x.getKey()) {
+            if (k<x.getKey()){
+                x = x.getLeft();
+            } else x = x.getRight();
+        }
+
+        return x != null;
     }
 }
