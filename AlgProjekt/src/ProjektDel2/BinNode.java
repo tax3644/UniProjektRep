@@ -8,6 +8,8 @@ public class BinNode {
     private int key;
 
 
+    // Constructor til BinNode, som er en knude til brug i DictBinTree
+    // Bladene instantieres til at være null og key er index
     public BinNode (int key){
 
         this.top = null;
@@ -16,6 +18,9 @@ public class BinNode {
         this.key = key;
 
     }
+
+
+    // Setters og Getters
 
     public BinNode getTop() {
         return top;
@@ -43,9 +48,5 @@ public class BinNode {
 
     public int getKey() {
         return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
     }
 }
