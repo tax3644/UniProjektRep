@@ -1,12 +1,21 @@
 package ProjektDel2;
 
+/*
+Navne:
+Tobias Albers Andersen
+Jann Jacobsen
+----------------------
+SDU-login:
+toand17@student.sdu.dk
+jajac18@student.sdu.dk
+*/
+
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class DictBinTree implements Dict{
 
-    // Root er træets rod og orderedArray benyttes til at returnerer en sorteret ArrayList
+    // Root er træets rod og fungerer i starten som et tomt dictionary
+    // OrderedArray benyttes til at returnerer en sorteret ArrayList
     private BinNode root;
     private ArrayList<Integer> orderedArray;
 
